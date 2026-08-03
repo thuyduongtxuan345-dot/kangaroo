@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kangaroo AR Fix Scale</title>
+    <title>Kangaroo AR</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
@@ -13,18 +13,16 @@
         </a-assets>
 
         <a-marker preset="hiro">
-            <!-- 1. Khối hộp đỏ dùng để TEST xem Hiro marker có hoạt động không -->
-            <a-box position="0 0.2 0" material="color: red;" scale="0.2 0.2 0.2"></a-box>
-
-            <!-- 2. Mô hình Kangaroo (Đã hạ scale xuống 0.001) -->
+            <!-- Mô hình Kangaroo: Đã hạ scale phù hợp và đưa về tọa độ gốc -->
             <a-entity 
                 obj-model="obj: #k-obj; mtl: #k-mtl"
-                scale="0.001 0.001 0.001" 
+                scale="0.003 0.003 0.003" 
                 position="0 0 0"
                 rotation="-90 0 0">
             </a-entity>
         </a-marker>
 
+        <!-- Ánh sáng giúp nhìn rõ màu sắc mô hình -->
         <a-entity light="type: ambient; color: #FFF; intensity: 1.5"></a-entity>
         <a-entity camera></a-entity>
     </a-scene>
