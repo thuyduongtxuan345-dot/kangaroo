@@ -13,9 +13,13 @@
         </a-assets>
 
         <a-marker preset="hiro">
+            <!-- 1. Khối hộp đỏ dùng để TEST xem Hiro marker có hoạt động không -->
+            <a-box position="0 0.2 0" material="color: red;" scale="0.2 0.2 0.2"></a-box>
+
+            <!-- 2. Mô hình Kangaroo (Đã hạ scale xuống 0.001) -->
             <a-entity 
                 obj-model="obj: #k-obj; mtl: #k-mtl"
-                scale="0.005 0.005 0.005" 
+                scale="0.001 0.001 0.001" 
                 position="0 0 0"
                 rotation="-90 0 0">
             </a-entity>
